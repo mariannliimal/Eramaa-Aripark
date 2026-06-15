@@ -1161,8 +1161,7 @@ footer {
   .reveal,
   .space-img, .space-body,
   .why-item, .stat-cell,
-  .manifesto-text .mw,
-  .intro-headline .hl-line {
+  .manifesto-text .mw {
     opacity: 1 !important;
     transform: none !important;
   }
