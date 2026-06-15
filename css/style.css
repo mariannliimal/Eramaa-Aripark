@@ -1131,7 +1131,8 @@ footer {
   .space-item.reverse { direction: ltr; }
   .space-img { aspect-ratio: 16/9; }
   .energy-grid { grid-template-columns: 1fr; }
-  .energy-img { display: none; }
+  .energy-img { order: -1; margin-bottom: 28px; border-radius: 12px; overflow: hidden; }
+  .energy-img img { min-height: 0; aspect-ratio: 4/3; }
   .why-grid { grid-template-columns: 1fr; }
   .why-img-wrap { max-width: 560px; }
   .location-grid { grid-template-columns: 1fr; }
@@ -1154,6 +1155,17 @@ footer {
     font-size: 12px;
   }
   #floatcta .text { height: 44px; line-height: 44px; padding: 0 18px; }
+
+  /* Mobile: disable JS scroll-reveal so all content is always visible
+     (iOS Safari doesn't reliably trigger the rAF fade-in) */
+  .reveal,
+  .space-img, .space-body,
+  .why-item, .stat-cell,
+  .manifesto-text .mw,
+  .intro-headline .hl-line {
+    opacity: 1 !important;
+    transform: none !important;
+  }
   #scrollind { display: none; }
 
   /* push hero down below fixed header */
@@ -1173,7 +1185,8 @@ footer {
 
   /* why */
   .why-items { gap: 20px; }
-  .why-img-wrap { display: none; }
+  .why-img-wrap { display: block; margin-bottom: 28px; border-radius: 12px; overflow: hidden; }
+  .why-img-wrap img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 
   /* energy */
   .energy-feats { gap: 16px; }
